@@ -1,0 +1,195 @@
+# What is Git and Why Git is Around: 
+
+
+* Git is a version control system, which helps us keep track of our source code files, when we're developing a software. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ What is Version Control and What are Version Control Systems (VCS): 
+
+
+* Version control, also known as source control, is the practice of tracking and managing changes to a software code. 
+
+* Version control systems are software tools that help programmers in managing changes to source code over time. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# History of Version Control Systems: 
+
+
+* Types of Version Control Systems Which Were Introduced Over Time in the History: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+(i) Local VCS: 
+
+* A local version control system is a local database located on your local computer, in which every file change is stored as a patch. 
+
+* Pros:
+a) Local VCS is better than having no VCS, at least you can rollback and recover your old files until and unless your local storage is not damaged. 
+
+* Cons:
+a) The main problem with Local VCS is that everything is stored locally. If anything were to happen to the local database, all the patches would be lost. 
+b) Via local VCS, collaborating with other developers or a team is very hard or nearly impossible.
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+(ii) Centralized VCS: 
+
+* A centralized version control system has a single server that contains all the file versions. 
+* This enables multiple clients to simultaneously access files on the server, pull them to their local computer or push them onto the server from their local computer. 
+* Whenever someone pulls the source code in the case of Centralized VCS from the centralized server, they just get the latest version of source code and all the old history of changes to the source code is just saved in the centralized server only. 
+* This way, everyone usually knows what everyone else on the project is doing.
+
+* Pros: 
+a) You can rollback and you can also recover your old files until and unless your centralized server is not damaged. 
+b) Centralized VCS allows easy collaboration with other developers who are in the team. 
+
+* Cons: 
+a) Everything is stored in a centralized server when we're using centralized VCS. So, if any kind of damage happens to the server, then nobody can save their versioned changes, pull files or collaborate at all. 
+b) Just like Local VCS is dependent on local storage for keep track of source code changes, like that centralized VCS is dependent only on centralized server for keep track of source code changes, and if centralized server is damaged then you lose the entire source code and history of the project, except whatever single snapshots people happen to have on their local machines which they pulled lastly. 
+c) So, obviously you still have some latest version of your project left with your team on their local PCs (Personal Computers) but you have lost the history of your software and with that you have lost older versions of your software, but this type of VCS is also not the most optimal option to go with, in future Distributed VCS got introduced and it's way better than Local or Centralized VCS and it don't have any drawbacks like these VCS. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+(iii) Distributed VCS: 
+
+* In distributed version control system, clients don’t just check out the latest snapshot of the files from the server, they fully mirror the repository, including its full history. 
+* Thus, everyone collaborating on a project owns a local copy of the whole project and its history, and every teammate of the project owns their own local database of the whole project, and even the server or cloud storage on which they're working, that also have the copy of the whole project and its history. 
+
+* Pros:
+a) With this distributed model of VCS, if the server becomes unavailable or dies, any of the client repositories can send a copy of the project's version and all history of project to any other client or back onto the server when server again becomes available. 
+b) Due to every client having whole history of the project on which they're working, it is enough that one client contains a correct copy which can then easily be further distributed, a like this chances of losing the versions, progress and history of software becomes negligible. 
+
+* Cons: 
+---> No Cons. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# Who Made Git and What Type of VCS is Git: 
+
+
+@ Git was made by Linus Torvalds.
+
+@ Linus Torvalds is the same person who developed "Linux" in early 1990s. 
+
+@ Git is the most well-known example of distributed version control systems. 
+
+@ Full form of Git is "Global Information Tracker".
+
+@ Distributed version control systems are the systems which are mostly used nowadays, as they are really beneficial, and they don't have any cons or any other severe drawbacks like "Local" or "Centralized" version control systems. 
+
+
+* So, as we have understood until now, Git is a Distributed VCS, and there are also many more other Distributed VCS available of different different companies. Ex: Mercurial, BitKeeper, GNU Bazaar, Monotone, etc. 
+
+* But Git is one of the most popular and the best quality distributed VCS which is available out there. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Features of Git: 
+
+
+1) Git saves Snapshot 
+2) Almost every operation is local except the only operations which are not local are, when we pull the source code or push our changes of the source code, to the server or cloud. 
+3) Git has integrity 
+4) Git generally only adds data (.git folder of a project mostly only keeps expanding, because mostly whatever chances you do in your repository, those changes keep saving in your .git file to keep the track record of you project's source code changes, and you hardly delete something). 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ Advantages of Using Git / Distributed VCS: 
+
+
+A) You can easily recover file. 
+B) Who introduced an issue and when? can be known easily when you're using Git/VCS. 
+C) You can rollback to previously working state if your software stopped working after a new change. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Now Let's Understand What is GitHub and What's the Difference Between Git and GitHub: 
+
+
+$ Git: Is a version control system that lets you manage and keep track of your source code history locally, but when you use git with servers or clouds with help of internet, then git becomes a distributed version control system, and companies use local private servers with git to manage their private software source codes, so that teams can collaborate and work on the software's source code. 
+
+
+* But if few students who are learning coding, want to work on a project and they're using git, then all the history of the source code will be stored locally by the git and if they want to work collaboratively then they have to keep transferring there source code locally with each other which is not convenient at all, as working collaboratively like this is impossible, so they're using git as a local version control system and they're locally trying to share files. 
+
+* But why they're locally trying to share files? 
+---> Because they don't have money like big companies to buy a local server on which they can push their code and pull from, and because of this these students are not able to use git as a distributed VCS 
+
+* To solve this problem of these coders who work on projects with small teams or who work in big teams but don't have capital to buy servers or the coders who don't want to stay limited to their local teammates and want to keep their software open source for people like these, who want to use git as distributed VCS but don't have access to private servers or clouds, hosting services come into the picture. 
+
+
+$ GitHub: is a cloud-based hosting service that lets you manage Git repositories, and GitHub connects git with internet and cloud storage and makes it easily accessible for individual, small team or open source community coders to work together collaboratively, and it let's use the full potential of git, the distributed VCS feature of git, which was not accessible to these people because they didn't have any server or cloud via which they can connect and collaborate. 
+
+
+
+
+@ In simple terms: 
+
+---> Git is a distributed version control system, but only when you have a server or a cloud via which you can connect with your teammates, otherwise git only behaves like an advanced local VCS. 
+---> And companies have private servers with which they can use git and take benefit of its distributed VCS feature, but people who want to connect to the world and who want to keep the codes open source of their software so that anyone can contribute, or people and students who want a way to connect and collaborate and work together but don't have access to servers or cloud services, for them hosting services like GitHub provide an internet cloud based solution which works in harmony with git to provide convenience. 
+
+
+
+* You can use GitHub to make repositories and use Git as a Distributed VCS, and you can make private or public repositories, public repositories are also known as open-source repos where anyone can contribute to your source code. 
+
+
+* Git is a free of cost VCS, and you can also use GitHub also as a coder for free but after a point under some circumstances GitHub charges you money if you want to use their service with really high volumes of data and code, and that money which GitHub is charging you, is not because you're using Git via there hosting service, because we know that Git is free and so they can't charge money for you using Git, but that money which these hosting services are charging you, is for the services like cloud and tools and the ease that they're providing you while you're using Git with their website. 
+
+
+
+@ There are many more hosting services other than GitHub which use either git as their primary VCS or they just use any other VCS, and as we have studied, the goal of these hosting services' is primarily to provide you connectivity to world so that if you keep your code open source then everyone should be able to contribute from anywhere in the world, and these services try to provide you cloud based solutions in harmony with version control systems so that you can use the distributed VCS feature of these VCS even when you don't have a dedicated server by yourself.
+
+@ Few examples of some of the other hosting services of Distributed VCS are: GitLab, BitBucket, Azure DevOps Server, Beanstalk, etc. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# References Cited: 
+
+
+* 1st Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Video Name: What is Git/GitHub & Why do we need it? | Git Tutorials #1): 
+https://www.youtube.com/watch?v=evknSAkUIvs&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=1
+
+
+* Wikipedia (Linus Torwalds): 
+https://en.wikipedia.org/wiki/Linus_Torvalds 
+
+
+* SerengetiTech (Types of Version Control Systems): 
+https://serengetitech.com/tech/introduction-to-git-and-types-of-version-control-systems/  
+
+
+* DevMountian (Difference Between Git and GitHub in Simple Terms): 
+https://devmountain.com/blog/git-vs-github-whats-the-difference/#:~:text=GitHub%E2%80%A6-,what's%20the%20difference%3F,help%20you%20better%20manage%20them 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
