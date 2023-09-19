@@ -1,0 +1,49 @@
+# How to Install Git: 
+
+
+* Just go to your browser and search "Git Install". 
+
+* Click on the 1st link, it will be the official link for installing Git.
+@ Link: https://git-scm.com/downloads 
+
+* Now download the version of git as per the operating system which you're using right now, I am using Windows so I will download "Git for Windows". 
+
+* Once you have downloaded "Git.exe", just like installing any other software, double click on the exe and run it and accept all the terms and conditions, keep pressing "Yes", read the terms properly if you want to and then hit "Install" button in the end and your git will be successfully installed.  
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+# Configuring Git: 
+
+
+* Once you have installed Git successfully. 
+
+* Open Git Bash. 
+
+* And let's configure the user and its email, whenever you will make any chances in any repository then these details will be displayed. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Commands for setting up username and user email:
+
+git config --global user.name "Aryan Tomar"
+git config --global user.email "aryantomar5000@gmail.com" 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# References Cited: 
+
+
+* 2nd Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Video Name: Installing Git + Initial Setup? | Git Tutorials #2): 
+https://www.youtube.com/watch?v=qkbK31dMNfM&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=2
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
