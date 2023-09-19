@@ -1,0 +1,123 @@
+# Tracking Our 1st Git Project: 
+
+
+* Make a new empty directory and create some random coding, text, word, excel, etc. files in it. 
+
+* Now do “Shift + Right Click” and open "Git Bash" in this new directory and run these commands. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Commands to be Used: 
+
+
+1) For Checking the Status of Directory: 
+
+Command: git status 
+
+---> This command helps you know whether the current directory in which you're, is a git repository or is it a part of a parent directory which is a git repository or not. 
+
+
+
+2) If you're current directory is not a git repository or neither it's a part of a parent directory which is a git repository then this command will be used to make your current directory as a git repo.:
+
+Command: git init 
+
+---> This above command means "Initialize Git", now your current directory has become a git repo. and now it's responsibility of git to keep track of your files in this directory, there is a .git folder which has been made in the directory where you have run the command "git init", but this .git folder stays hidden by default and we will see in the future that how to unhide this folder and see it if you want to check it. 
+
+
+
+3) Now when your current directory has become a git repo, you can now run "git status" command again and now it will tell you the status of your git repo. 
+
+
+
+4) You have not committed anything until now, so to put all the files in the "working directory" to the "staging area" you can run this command. 
+
+Command: git add --a 
+
+[OR]
+
+Command: git add .
+
+
+---> This above command means "put all the files in the current directory into the staging area", --a means "all" and even dot can be used instead of --a if you want to stage all the modified files at once. So, you can use any of the above two commands. 
+
+
+Command: git add name_of_file.with_its_file_extension
+Ex: git add first.txt 
+
+---> If you don't want to add all files in the working directory to the staging area then you can add them one by one using their name, above command shows you that how you can add a single file to the staging area from the working directory. 
+
+---> You can even add multiple files at once, just keep writing their name with their file extension one by one seperated by space. 
+
+Ex: git add first.txt second.txt third.txt 
+
+@ Note: If your file name consists space then write the file name in double quotes
+Ex: git add "my first file.txt" "my second file.txt"
+
+
+
+5) Now you can again check "git status" and the output will tell you "Changes to be committed", it means the things which we have kept in staging area, which are ready to get committed are now being shown to us. 
+
+
+
+6) Now to commit the changes, we have to run the commit command. 
+
+Command: git commit -m "Initial Commit" 
+
+---> We can also give direct command "git commit" but then an editor will open where you can give notes for this commit, but if you want to give a message directly in the console and commit the changes without opening the editor, then you can use -m, which refers to "message" that you wanna save with respect to this commit and then you can give the message in double quotes ahead. 
+
+
+
+7) Now you can again run "git status" command and you will see that there is nothing left to be committed, everything has been taken care of, "Nothing to commit, working tree clean". 
+
+
+
+8) If you want to see that who has done what commits until now in this git repo. then you can run this command. 
+
+Command: git log 
+
+---> This command will show you the full history of commits of your current git repo. 
+
+---> Use arrow keys "Up" and "Down" to navigate through the log. 
+
+---> Press "q" letter on the keyword to exit log, "q" stands for "quit" here.
+
+
+
+9) If you want to remove the whole .git folder from your git repository, then run this command. 
+
+Command: rm -rf .git
+
+---> BE CAREFUL WHEN YOU'RE RUNNING THIS COMMAND, because this command will make you lose your git repository's .git folder and if your git repository loses the .git folder, then it will not be a git repository anymore and as the .git folder is deleted from your git repository's directory, because of that all your history of changes to the source code and all the track record of your software's older versions will be lost. 
+
+
+
+10) Now if you will again run "git status" command then it will tell you that "this folder is not a git repository or this folder is not a part of any parent folder which is a git repository".
+
+
+
+11) And if you again want to make this folder as a git repository then you have to again run "git init" command, so that a new .git folder is added to this directory and so that again this directory becomes a git repo. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 4th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Video Name: Tracking Our first Git Project | Git Tutorials #4): 
+https://www.youtube.com/watch?v=-e0RtzuNgS4&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=4 
+
+
+* 5th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Cloning a Remote Git Repository from GitHub | Git Tutorials #5): 
+https://www.youtube.com/watch?v=R3uS1poPwNM&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=5 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
