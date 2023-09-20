@@ -1,0 +1,95 @@
+# Prerequisites: 
+
+
+* You should have basic Idea about Operating Systems, Shells, Kernels, System Calls and Basic Linux Commands. 
+
+* You should know difference between these operating systems, and you should know history of these operating systems and their current market scenario: Windows, Unix, Linux and MacOS (All these are most popular Operating Systems). 
+
+* You should have experience of using any Linux Operating System and its terminal. 
+
+* But if you don't have knowledge about all these above topics, then you should 1st go study these things and then you should continue with git, but if you still want to continue understanding Git and GitHub right now, then you should just at least try understanding difference between Windows and Linux, and you should understand basic Linux Commands which are written below, and then for currently you're good to go. 
+
+* But whenever you get time, you should learn all the things which are mentioned above, and if you have done or you're currently pursuing any Computer Science Bachelor's Degree, then you would have most probably already studied "Operating Systems" subject in your curriculum and you should already know all the above mentioned things, but if you still don't know these things, then there is no problem, whatever your scenario is, you can still continue by choosing any of the above mentioned paths, which suits your situation the best. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Basic Linux Commands: 
+
+
+* pwd 
+---> pwd stands for "Present Working Directory".
+---> The pwd command is mostly used to print the current working directory on your terminal. 
+---> Just write pwd on the console and your console will tell you your present working directory. 
+---> Ex: pwd
+
+
+* cd 
+---> cd stands for "Change Directory".
+---> The cd command is used to navigate between directories. 
+---> It requires either the full path or the directory name, depending on your current working directory. 
+---> So, write cd and then give space and type the name of the directory which is present in the current directory or write the absolute path of the directory where you want to go. 
+---> Ex: cd dir 
+
+
+* ls 
+---> ls is the short for "List".
+---> The ls command is commonly used to identify the files and directories in the working directory. 
+---> Ex: ls 
+
+
+* ls -a 
+---> This command also shows the hidden files in the current working directory. 
+
+
+* touch 
+---> Touch command is used to create empty file in UNIX/Linux Operating System. 
+---> This command can be used when the user doesn’t have data to store at the time of file creation. 
+---> Ex: touch a.txt 
+
+
+* clear
+---> Clears all history from the screen which was shown in your current active git bash terminal. 
+
+
+* exit 
+---> This command closes your current terminal on which you were working. 
+
+
+
+
+
+@ To learn more about other most commonly used Linux commands, do refer the article of GeeksForGeeks or Hostinger, which I have attached in the last section of this notepad file, the section name where you will find link of these above-mentioned articles is: "References Cited". 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 5th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Cloning a Remote Git Repository from GitHub | Git Tutorials #5): 
+---> Time Stamp - 4:20 
+https://www.youtube.com/watch?v=R3uS1poPwNM&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=5 
+
+
+* GeeksForGeeks (touch command in Linux with Examples): 
+https://www.geeksforgeeks.org/touch-command-in-linux-with-examples/
+
+
+* GeeksForGeeks (25 Basic Linux Commands For Beginners): 
+https://www.geeksforgeeks.org/basic-linux-commands/
+
+
+* Hostinger (40 Most Commonly Used Linux Commands):
+https://www.hostinger.in/tutorials/linux-commands 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
