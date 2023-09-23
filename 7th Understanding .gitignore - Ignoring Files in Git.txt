@@ -12,6 +12,60 @@
 * Git ignores a blank folder by default, git does not show an empty folder as untracked because it is empty and there is nothing to track. 
 
 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Learning How to Use gitignore File: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Creating a .gitignore File: 
+
+
+* Open git bash in your git project folder and create a .gitignore file using touch command. 
+
+Command: touch .gitignore
+---> This above command will create a ".gitignore" file in your current working directory. 
+
+* Now you can open this .gitignore text file and you can write name of untracked files or/and folders, or you can write general patterns in it to ignore untracked files or/and folders.  
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Understanding How to Use Git Ignore and Its Patterns: 
+
+
+* Whatever file or/and folder names and general patterns we mention in gitignore file, we write them in relative manner, means w.r.t to the directory in which the gitignore fill is present. 
+
+
+1) If you want to ignore a file, then you can just directly write that file's name with its file extension in the gitignore file, and that file will be successfully ignored by git if it is an untracked file.
+
+Ex: If you have a file named "error.log" in your project folder, then to ignore the "error.log" file, just open .gitignore file and write "error.log" inside it and save the gitignore text file. 
+
+
+2) If there are more than one files of ".log" file extension or ".xlsx" file extension or of any file extension, and you want to ignore all of the files of that specific file extension, then you can simply type a general pattern inside your gitignore file to ignore all those files. 
+
+Ex: If there are 3 files named miscellaneous1.xlsx, extrawork.xlsx and a.xlsx, and you want to ignore all these excel files, then instead of typing name of all these excel files in your gitignore file, just because all the files are of same type, you can simply type a general pattern like "*.xlsx".
+---> * is a symbol which means "everything in the directory". 
+---> So, the above given general pattern says, "Everything in the directory which has a file extension xlsx", and due to this general pattern all the files with .xlsx file extension will be ignored by git because this general pattern is written inside the .gitignore file. 
+
+
+3) You can also ignore any directory by typing its name in the gitignore file. 
+
+Ex: If there is a directory named "dir" in your git project folder and you want to ignore it then write "dir/" in your gitignore file, and the directories in your git project folder and child folders, which are named "dir" will be ignored. 
+---> When you ignore a whole directory, obviously even the files inside it is ignored completely. 
+
+
+4) If you just want to ignore the "dir" folder, which is present in the main directory where gitignore is present and you don't want to ignore the "dir" folders which are present in the child directories of the main directory, then write this inside the gitignore file "/dir/".  
+
+
+5) Inside the git ignore file you can write relative paths w.r.t to the gitignore file if you want to ignore specific files or/and folders which are present in a specific location. 
+Ex: static/dir/addition 
+---> Write above example line in the gitignore file and the specific folder named "addition" will be ignored, which is present at the above given particular relative location w.r.t to the gitignore file. 
+
+
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
