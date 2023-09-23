@@ -1,0 +1,20 @@
+# Understanding What is .gitignore File: 
+
+
+* gitignore file is basically a text file placed in your git repository that tells git not to track certain files and folders that you don't want being uploaded to your .git folder. 
+
+* You can write the name of file or/and folder whichever you want to ignore in the gitignore file, and the file or/and folder will be ignored by git. 
+
+* You can also ignore a specific type of files or/and folders by writing down specific patterns in your gitignore file. 
+
+* But the only files or/and folders which will be ignored by git when typed inside gitignore file are those which are untracked. 
+
+* Git ignores a blank folder by default, git does not show an empty folder as untracked because it is empty and there is nothing to track. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+
