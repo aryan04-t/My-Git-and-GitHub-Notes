@@ -66,8 +66,68 @@ Ex: static/dir/addition
 ---> Write above example line in the gitignore file and the specific folder named "addition" will be ignored, which is present at the above given particular relative location w.r.t to the gitignore file. 
 
 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Specifying Exceptions in Patterns Which are Written in gitignore File: 
+
+
+* If you have a general pattern (like *.log) defined, but you want to commit a specific file. 
+
+* Then you can use negate symbol "!", and you can write the name of that file after negate symbol, to exclude this particular file from the above-mentioned pattern. 
+
+---> So, write "!debug.log" in gitignore file and now you can see this "debug log" is excluded from the above pattern, and now it is not being ignored by git, and it is shown as "untracked", and now you can stage and commit this file, if you want. 
+
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Ignore a File Which is Being Tracked by Git: 
+
+
+---> If a file is being tracked by git, then you cannot directly ignore that by adding it to .gitignore file. 
+---> If you add a file in .gitignore which is being tracked by git, then this logic will not work, git will still keep tracking that file of yours which you have added in .gitignore file, because .gitignore file can only be used to ignore files which are untracked. 
+---> So, it simply means that if a file is being tracked and you want to ignore that file, then 1st you have to change that file's status to "untrack" and then you have to add that file to the .gitignore file. 
+
+
+* Run this below command to make git stop tracking a file and to make its status "Untracked": 
+
+Command: git rm --cached name_of_the_file_which_is_in_tracking_area.with_its_file_extension 
+
+* Whether a file is in the "working directory with modified file status" or whether it is in the "staging area", you can use this above command in both the scenarios to untrack a file, because when the file's status is staged or modified, then it simply means that, that file is being tracked by git and you can untrack is using the above command. 
+
+Ex: git rm --cached first.txt
+
+---> Whichever file's name you've mentioned, this above command will remove that file from the tracking area, and this command will set the status of this file whose name you have written as "Untracked", and now you can add this file to .gitignore and things will work as expected.
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 7th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (.gitignore: Ignoring Files in Git | Git Tutorials #7): 
+https://www.youtube.com/watch?v=TwKALVoK5cE&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=7 
+
+
+* 10th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Moving and Renaming Files In Git | Git Tutorials #10): 
+---> Time Stamp - 5:46 
+https://www.youtube.com/watch?v=1t56nLJJbMU&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=10 
+
+
+* Bitbucket (.gitignore) : You can check all other types of gitignore patterns also in this article: 
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
 
 
 
