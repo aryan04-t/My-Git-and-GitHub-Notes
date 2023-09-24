@@ -1,0 +1,32 @@
+# Git Diff: Showing Changes Between Commits, Staging Area & Working Directory: 
+
+
+* Command: git diff
+
+---> This command compares working directory and staging area and shows difference between them. 
+
+
+
+* Command: git diff --staged
+
+---> This command compares staging area and last commit and shows difference between them. 
+
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 8th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Git Diff: Showing Changes Between Commits/Staging Area & Working Directory | Git Tutorials #8): 
+https://www.youtube.com/watch?v=87LrjX5xvFA&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=8 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
