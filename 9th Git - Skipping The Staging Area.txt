@@ -1,0 +1,39 @@
+# Skipping The Stagging Area: 
+
+
+* Command: git commit -a -m "Write the Commit Text Here" 
+
+---> This above command will skip staging area, and it will commit all the files which are being tracked, whether the current status of file is "staged" or "modified", all of them will get commited directly. 
+
+---> This above command basically is a single command which does staging and commiting in one go, that's why we say that we've skipped the staging area, but in backend this command 1st stages the modified files (these are the files which are being tracked and were modified), and then this command commits all the files which are in the staging area. 
+
+---> Using the above command we're skipping the staging area and we're directly commiting the changes, but be aware that by using this command we're skipping the staging area for the modified files and we're directly committing them and also we're committing everything which is present in the staging area already, but this doesn't means that untracked files will also get commited, untracked files will still stay untracked and nothing will happen to them due to this command until and unless you start tracking them.  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Tip: 
+
+
+* Stagging files and then committing them is always recommended because it's a good coding practice. 
+
+* But when staging and committing files in a traditional way doesn't feel that essential and if you want to skip the staging area and directly commit the files, then in this kind of scenario you can use above mentioned command to commit the files without staging them.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 9th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Git: Skipping The Staging Area | Git Tutorials #9): 
+https://www.youtube.com/watch?v=epGcuDu3z7k&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=9 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
