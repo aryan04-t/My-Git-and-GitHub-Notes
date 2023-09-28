@@ -1,0 +1,62 @@
+# Moving and Renaming Files in Git: 
+
+
+@ You can always delete, move, and rename files graphically, but doing these changes graphically can make git confused for a little bit, and if you don't know how to handle the sitution then you will also get confused. 
+
+
+* Example: 
+---> If you rename a file graphically in your folder and git was tracking that file. 
+---> Then git feels that you have deleted the file of old name and add new file of this new name, and when you will run "git status" command after renaming a file graphically you will notice this same scenario on the console which I just stated. 
+---> You can simply use "git add" command and you have to add both names oldFileName.FileExtension and newFileName.FileExtension to the stagging area, and now git will be able to recognise that you have renamed a file and not deleted an old file and added a new one, and according to this git it will stage this above change as "renamed:	oldFileName.FileExtension -> newFileName.FileExtension", and now you can commit this change.  
+
+
+@ You can use this above process to rename a file graphically and update the file's status in git manually using "git add" and "git commit" command, but it is a annoying lengthy process. 
+
+
+* Why to use this above lengthy process, when you can directly use a git command to rename a file, this command will change the name of your file in the local folder of yours and it will also stage this new renamed change for you automatically and you can simply just commit this new renaming change and you can update your .git folder like this. 
+
+
+* And as a coder we should know that how we can do these things using git bash instead of just knowing that how we can do them graphically. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Moving/Renaming a File: 
+
+
+* Command: git mv name_of_a_existing_file.txt new_name_that_you_want_to_rename_your_existing_file_with.txt
+
+---> Ex: git mv first.txt first_rename.txt 
+---> This above command can be used to rename a file. 
+---> 1st you type name of a file which already exits, then type the name of the file with its file, and then you a type the new name of the file which you want to rename this already existing file to. 
+---> Type the new name of the file also with file extension. 
+---> This above command after renaming your file, it will directly put this change in your git project to the staging area, then you can just commit this new change if you want. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Removing a File: 
+
+* Command: git rm name_of_the_file.with_its_file_extension 
+
+---> Ex: git rm third.txt 
+---> Whichever file's name you have written in the end of the above command, that file will be deleted by this above command if that file is present in the current working directory, and this command will also stage this new modification of yours, and then you can just commit this change of “removing a file” to your git project’s .git folder.  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 10th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Moving and Renaming Files In Git | Git Tutorials #10): 
+https://www.youtube.com/watch?v=1t56nLJJbMU&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=10
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
