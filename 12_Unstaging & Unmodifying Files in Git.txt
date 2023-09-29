@@ -1,0 +1,109 @@
+# Unstaging & Unmodifying Files In Git: 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+@ Unstaging File: 
+
+
+* If you want to unstage a file which is not added to the staging area for the 1st time, then this is the command which you have to run to unstage it. 
+
+Command: git restore --staged name_of_file.obviously_with_its_file_extension
+
+---> Ex: git restore --staged first_renamed.txt 
+---> So, if first_renamed.txt was the file which you have staged earlier and now you have ran the above command, then now first_renamed.txt is the file which has been unstaged, and you can check this by running "git status" command. 
+
+
+
+* If you will run this command, then you can unstage all the staged files which have not been staged for the 1st time. 
+
+Command: git restore --staged .
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+@ Unmodifying File: 
+
+
+* If you modify a file and it is not staged until now, and it is present in the working directory, and you want this particular file to reach back to its last committed state, then you can run this command, which will undo all the new modifications to this particular file and it will take this file back to the way it was when you last committed changes of this file. 
+
+Command: git checkout -- name_of_the_file.with_its_file_extension 
+
+Ex: git checkout -- a.txt 
+
+---> Note: Don't forget to give space between -- and file name in the above command. 
+---> This above command doesn't affect the files which are present in the staging area, if you want to use this command on a file which is present in the staging area, then 1st unstage that particular file and then run this command to undo the changes that has been made to it after the last commit. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+* But if you have modified more than 1 files, and all of them are unstaged and they're present in the working directory and you want to roll back to your files' last committed state and you want to remove all the changes which have been made to these file, then this is the command which you should run. 
+
+Command: git checkout -f 
+
+---> Be careful while running these above commands of unmodifying files, because if you run these commands when you don't want to really use them, then you will lose the crucial changes that you have made to your files.  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+@ Untracking File: 
+
+
+---> We've studied this topic earlier that "How to unstage a file" when we were studying .gitignore file. 
+---> But let's see it again that we can unstage a file. 
+  
+
+* Run this below command to make git stop tracking a file and to make its file status as "Untracked" 
+
+Command: git rm --cached name_of_the_file_which_is_in_tracking_area.with_its_file_extension 
+
+* Whether a file is in the "working directory with modified file status" or whether it is in the "staging area", you can use this above command in both the scenarios to untrack a file, because when the file's status is staged or modified, then it simply means that, that file is being tracked by git and you can untrack is using the above command. 
+
+Ex: git rm --cached first.txt
+
+---> Whichever file's name you've mentioned, this above command will remove that file from the tracking area, and this command will set the status of this file whose name you have written as "Untracked", and now you can add this file to .gitignore and things will work as expected.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# Using "git restore" Command for Unmodifying Files: 
+
+
+* There is one more command which can be used to discard all the changes which has been made to the file, obviously you can use the above studied "git checkout" command to unmodify a file, but you can also use this below mentioned "git restore" command, both commands work the same and it's easier to relate "git restore" command with unmodifying a file. 
+
+Command: git restore name_of_the_file.with_its_file_extension 
+
+Ex: git restore a.txt 
+
+
+
+* Why do we have two commands "git checkout" and "git restore" to unmodify a file? 
+---> We will study about this later when we will study branching.  
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# References Cited: 
+
+
+* 12th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Unstaging & Unmodifying Files In Git | Git Tutorials #12): 
+https://www.youtube.com/watch?v=m08GSxWO1pQ&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=12 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
