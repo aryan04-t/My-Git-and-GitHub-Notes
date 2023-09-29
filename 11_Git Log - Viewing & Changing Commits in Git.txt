@@ -1,0 +1,290 @@
+# Git Log: Viewing & Changing Commits in Git: 
+
+
+
+---> "git log" command shows commit logs. 
+
+---> One of the most fundamental services provided by Git is the project history. 
+
+---> Since Git keeps track of all changes to files made within a repository, it can offer very powerful logging features. 
+
+---> You can query a project’s history in many different ways, and you can extract and display various data using one flexible command. 
+
+---> The "git log" command is huge, the biggest of any regular Git command. Its manual is over 2,500 lines long. If you want to read "git log" command’s manual, then here it is.
+Link: 
+
+---> Fortunately, git log provides much of its most useful behaviour from just a few key options. So, let’s see some basic variations of git log command. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Showing Diffs in the Log: 
+
+
+---> An important detail when looking at a repository’s history is the diffs themselves. They represent what’s actually changed in the code. 
+---> For starters, you can get a summary of changes alongside each commit using --shortstat. 
+
+
+* Command: git log --shortstat 
+* Command: git log --stat 
+
+---> Above log command also displays the files that have been modified, but it shows log in a differently summarized way. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+* Command: git log -p 
+
+---> In above command p stands for word "patch", so you can also write above command as "git log --patch". 
+---> This above command displays the files that have been modified. It also shows the location of the added, removed, and updated lines, above command gives a very detailed output. 
+---> Press "q" and wait to exit this command. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Formatting Git Log Output: 
+
+
+@ There are a lot of other log commands also available, each and every log command formats the git log output in a different manner, and you can see few of those commands written below:  
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ Viewing a Branch Graph:
+
+
+---> The --graph option allows you to visualize relationships between branches. It’s very basic but can help untangle a complicated history.
+
+Command: git log --oneline --graph 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ Customized Pretty Output: 
+
+
+@ You can achieve more complicated formatting by specifying it in detail using the --pretty option.
+@ The syntax goes from very simple to much more complex, so consult a manual for complete details.
+
+
+* Command: git log --pretty=oneline 
+
+---> The above command is equivalent to: 
+
+* Command: git log --oneline 
+
+---> By adding "--pretty=oneline" or "--oneline" to the log command, makes the log to be displayed in a compressed manner. 
+---> Above command shows the log information in a single line and displays the hash of a commit in a shortened manner. 
+
+
+
+* Command: git log --pretty=short 
+---> Above command is the same as git log, but without the date or full message. 
+
+
+
+* Command: git log --pretty=fuller 
+---> Shows the output of git log in a detailed manner.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Format Variant of Pretty, for Writing User Defined Git Log Output Format: 
+
+
+@ With the format: variant, you can supply a string containing whatever content you want, including placeholders that are replaced by various data. 
+
+@ Here are some example placeholders:
+
+%H commit hash
+%h abbreviated commit hash
+%an author name
+%ae author email
+%ad author date 
+%s commit message subject
+%b commit message body
+%p abbreviated parent hashes 
+
+
+* Command: git log --pretty=format:"%H -- %an -- %ae" 
+
+---> Above I have written a customized output format for git log, you can also write your own customized output format for git log. 
+---> You can refer this official website of git (Link: https://git-scm.com/docs/git-log) and you can format your "git log" output as per your needs. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Filtering Git Log Output: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Restricting by Amount: 
+
+
+* If we run the below written command. 
+
+Command: git log -2
+
+---> Then we can see only last 2 commits with details and if we write any other number in above command, other than 2, then we can see last that many commits in our log. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Restricting by Date: 
+
+
+* Command: git log --since=2.days 
+
+* Command: git log --until=2.days
+
+
+* Command: git log --since=2.weeks 
+
+* Command: git log --since=2.months
+
+* Command: git log --since=2.years   
+
+
+
+$ To restrict the set of commits to a given date range, use the --since and --until options together. 
+$ These each take a date in ISO 8601 format. 
+$ You can use either --since or --until on their own, or both together to specify a range. 
+
+
+* Command: git log --since="write_starting_date_of_range_here" --until="write_ending_date_of_range_here"
+
+---> Ex: git log --since="2023-09-08" --until="2023-09-16" 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Restricting by File: 
+
+
+* Git log can focus on a specific file rather than every file in your repository. 
+* This is great for helping you find out how a particular file has changed over time. 
+
+Command: git log name_of_the_file.with_its_file_extension_obviously 
+
+Ex: git log a.txt
+
+---> If your file name has space in its name then write the name of file in double quotes as it is with spaces, and don't forget to add file extension at the end of the file's name. 
+
+Ex: git log "my 1st C++ code.c" 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Note:
+---> In logs, "Author" is a person who has created that file, and the person whose name is written in front of the "Commit", he/she is the person who has done that commit. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# How to show the commit log as a Graph in Git:
+
+
+---> We can use --graph to get the commit log to show as a graph.
+
+Command: git log --graph 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+# How to show the commit log as a graph of all branches in Git:
+
+
+---> This below command also does the same thing as the above command, but this below command shows the graph for all the branches.
+
+Command: git log --graph --all
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Command for checking a specific commit in detail in Git: 
+
+
+* This command shows details of a specific commit.
+
+* You can run "git log --oneline" command, after running this command you will get an abbreviated commit-id for every commit written in front of them, just copy the commit id of the commit which you want to see in detail, and then paste the commit id in the below command, and then run the below command. 
+
+Command: git show commit-id 
+
+Ex: git show 88988ea 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Command for Changing Log:
+
+
+* Command: git commit --amend  
+
+---> Above command allows you to modify and add changes to the most recent commit. 
+---> After running the above command, Vim editor will be opened by default, you can press "i" to type in it, you can press "esc" and then type ":wq" to exit the vim editor. 
+
+
+
+@ If you comitted and then pushed the changes to a remote git repository and then you used above command to edit the most recent commit of yours, now to push these new changes of editing the most recent commit, you have to force push them.  
+
+* Run this below command for force pushing the changes that you made in the recent commit. 
+
+Command: git push --force remote_name branch_name 
+
+Ex: git push --force origin master 
+
+
+* WARNING: Note that using --force is not recommended unless you are absolutely sure that no one else has cloned your repository after the latest commit. 
+
+* Because --force will destroy any changes someone else has pushed to the branch after your last commit which you have edited just. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 11th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Git Log: Viewing & Changing Commits In Git | Git Tutorials #11): 
+https://www.youtube.com/watch?v=Hxn3OguEMd4&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=11 
+
+
+* Git (git log Official Documentation): 
+https://git-scm.com/docs/git-log
+
+
+* MakeUseOf (How to Inspect a Project’s History With git log): 
+https://www.makeuseof.com/inspect-project-history-git-log/ 
+
+
+* Educative (How to change a Git commit message after a push):
+https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
