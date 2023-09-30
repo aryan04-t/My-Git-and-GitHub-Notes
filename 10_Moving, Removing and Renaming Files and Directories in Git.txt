@@ -33,15 +33,44 @@ _ _ _ _ _ _ _ _ _ _ _ _ _
 ---> Type the new name of the file also with file extension. 
 ---> This above command after renaming your file, it will directly put this change in your git project to the staging area, then you can just commit this new change if you want. 
 
-_ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 
-@ Removing a File: 
+@ Removing a File (Locally + From Git): 
 
-* Command: git rm name_of_the_file.with_its_file_extension 
+
+Command: git rm name_of_the_file.with_its_file_extension 
 
 ---> Ex: git rm third.txt 
 ---> Whichever file's name you have written in the end of the above command, that file will be deleted by this above command if that file is present in the current working directory, and this command will also stage this new modification of yours, and then you can just commit this change of “removing a file” to your git project’s .git folder.  
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Removing a File (Not Locally, Only From Git): 
+
+
+Command: git rm --cached file_name.with_file_extension 
+
+---> This will delete the file from git and locally it will be unaffected. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Removing a Directory (Locally + From Git): 
+
+Command: git rm -r directory_name/ 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Removing a Directory (Not Locally, Only From Git): 
+
+
+Command: git rm -r --cached directory_name/ 
+
 
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -52,7 +81,15 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 * 10th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Moving and Renaming Files In Git | Git Tutorials #10): 
-https://www.youtube.com/watch?v=1t56nLJJbMU&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=10
+https://www.youtube.com/watch?v=1t56nLJJbMU&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=10 
+
+
+* Sentry (Delete a file from a Git repository): 
+https://sentry.io/answers/delete-a-file-from-a-git-repository/
+
+
+* StackOverflow (How do I remove a directory from a Git repository?):
+https://stackoverflow.com/questions/6313126/how-do-i-remove-a-directory-from-a-git-repository 
 
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
