@@ -236,7 +236,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 
-# Command for Editing Last Commit:
+# Command for Editing Latest Commit:
 
 
 * Command: git commit --amend  
@@ -267,6 +267,9 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 # Command for Editing any Commit Older than Last Commit:
 
 
+$ WARNING: Make sure to have a clean working tree before using below commands, and also make a back up of your current git repository. 
+
+
 command: git rebase -i HEAD~n 
 
 * Use the above command to display a list of the last n commits in your default text editor.
@@ -283,6 +286,23 @@ command: git rebase -i HEAD~n
 Command: git push --force remote_name branch_name
 
 Ex: git push --force origin master 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+# Command For Editing Root Commit: 
+
+
+---> Root commit is the 1st commit of your git log, which don't have any parent commit 
+
+Command: git rebase -i --root  
+
+* After this above command follow the above process of replacing "pick" with "reword", and then exit the commit list file. 
+
+* Now edit the "commit message" of root commit and save the changes. 
+
+* To update your remote git repository on GitHub, use force push. 
 
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -310,6 +330,10 @@ https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push
 
 * GitHub Docs (Changing a commit message):
 https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message
+
+
+* StackOverflow (Edit the root commit in Git?): 
+https://stackoverflow.com/questions/2119480/edit-the-root-commit-in-git 
 
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
