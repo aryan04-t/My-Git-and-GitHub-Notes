@@ -236,7 +236,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 
-# Command for Changing Log:
+# Command for Editing Last Commit:
 
 
 * Command: git commit --amend  
@@ -264,6 +264,31 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 
+# Command for Editing any Commit Older than Last Commit:
+
+
+command: git rebase -i HEAD~n 
+
+* Use the above command to display a list of the last n commits in your default text editor.
+
+* Replace "pick" with "reword" before each commit message you want to change.
+
+* Save and close the commit list file.
+
+* In each resulting commit file, type the new commit message, save the file, and close it.
+
+
+@ When you're ready to push your changes to GitHub, use the push --force command to force push over the old commit. 
+
+Command: git push --force remote_name branch_name
+
+Ex: git push --force origin master 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
 # References Cited: 
 
 
@@ -281,6 +306,10 @@ https://www.makeuseof.com/inspect-project-history-git-log/
 
 * Educative (How to change a Git commit message after a push):
 https://www.educative.io/answers/how-to-change-a-git-commit-message-after-a-push 
+
+
+* GitHub Docs (Changing a commit message):
+https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message
 
 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
