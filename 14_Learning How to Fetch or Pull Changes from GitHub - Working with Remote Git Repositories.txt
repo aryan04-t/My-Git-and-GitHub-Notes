@@ -1,0 +1,142 @@
+# Revising "git clone" command: 
+
+
+* As we already know, cloning a remote repository simply means copying all files of a remote repository to the local machine. 
+
+* You can use "git clone" command to clone a repository. 
+
+
+@ When you run git clone, the following actions occur:
+
+  (i) A new folder called "repo" is made 
+ (ii) It is initialized as a Git repository
+(iii) A remote named origin is created, pointing to the URL you cloned from
+ (iv) All of the repository's files and commits are downloaded there
+  (v) The default branch is checked out 
+
+---> For every branch foo in the remote repository, a corresponding remote-tracking branch refs/remotes/origin/foo is created in your local repository. You can usually abbreviate such remote-tracking branch names to origin/foo. 
+
+
+
+@ Note:
+---> Synchronizing your local repository with a remote repository is actually a two-step process: fetch, then merge. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# Introduction to "git fetch" and "git pull" Command:
+
+
+* When you start working with a remote git repository which is not yours, then for the first time to get all the files of that remote repository locally, you use "git clone" command. 
+
+* Now if you keep working on that remote repository that you cloned locally, and owner/collaborators of that remote repository make some new changes, then to get these new updates of that remote repository locally, you don't clone that whole repository again if you already have the older version of it locally. Although you can clone the new version also, but it's not the optimal way to get the new changes of that repository.  
+
+* "git fetch" and "git pull" are two commands which are used to get updates from the remote repository if you already have older version of that remote repository locally present with you. 
+
+* "git fetch" and "git pull" both are used to get updates from a remote repository, but both are little bit different in nature from one another, and what is that difference between them, we will study about it ahead. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# Understanding "git fetch" Command: 
+
+
+
+* We can use "git fetch" to retrieve new work done by other people. 
+
+* Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches. 
+
+* Because "git fetch" command doesn't merge the changes on its own after getting them from the remote repository, that's why it’s considered a safer option to update your local repository using fetch command.  
+
+Note: We've have not studied tags until now, we will study them ahead. 
+
+* If you already have a local repository with a remote URL set up for the desired project, you can grab all the new information of that repository by running the below written command on your git bash terminal. 
+
+Command: git fetch REMOTE-NAME 
+
+Ex: git fetch origin 
+
+---> This above command will fetch all the branches which are present in the remote whose name you have mentioned in the command. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+@ Manually Merging Fetched Changes into Local Branch: 
+
+
+* Because "git fetch" command only fetches the new changes which are present in the remote repository and it doesn't merge them automatically on its own to your local branch, that's why we have to merge the new updates to our local branch manually. 
+
+* For merging a remote-tracking branch (i.e., a branch fetched from a remote repository) with your local branch, you can run this below written command on your git bash terminal. 
+
+Command: git merge REMOTE-NAME/BRANCH-NAME 
+
+---> This above command will merge the remote branch which you fetched from the remote repository with your local active branch. 
+---> P.S.: Local active branch is the local branch in which you are currently present, and you ran the above command on the git bash terminal while being in this local branch. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# Understanding "git pull" Command or We can say Understanding Pull w.r.t GitHub / Hosting Services / Server: 
+
+
+* "git pull" is a convenient shortcut for completing both git fetch and git merge in the same command. 
+
+
+* Using "git pull" command for Pulling Changes from the Remote Repository: 
+---> The "git pull" command is used to fetch and download content from a remote repository and immediately update the local repository by merging the new changes automatically to the local active branch.  
+---> This above whole process of "downloading the data of a remote repository and updating the local repository" is called "Pulling from the Remote Repository" aka "Pull". 
+---> In even more simple terms we can say: "To bring the changes from remote repo and to merge them automatically to the local repo, we pull". 
+
+
+---> "git pull" is a more aggressive command than "git fetch" because it downloads the content from the remote repository and executes git merge on the local active branch on its own.
+---> The automatic merge due to the "git pull" command creates a new merge commit and integrates the new content with your work. 
+---> However, this automatic merge behaviour of "git pull" command can cause conflicts with your work in progress, and it may require manual resolution. 
+
+
+Command: git pull REMOTE-NAME BRANCH-NAME
+
+
+@ Because pull performs a merge on the retrieved changes, you should ensure that your local work is committed before running the pull command. If you run into a merge conflict you cannot resolve, or if you decide to quit the merge, you can use "git merge --abort" command to take the branch back to where it was in before you pulled.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# Difference Between "git pull" and "git clone": 
+
+---> Git clone copies all the files from a remote repository to the local machine, but git pull only copies the modified files a remote repository to the local machine. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+# Difference Between "git fetch" and "git pull": 
+
+---> Git fetch is a safer version of git pull as it does not merge the new fetched changes with the local active branch and you can merge these changes manually later on, but git pull merges the new fetched changes to the local active branch on its own after retrieving the changes from the remote repository. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
+
+
+
+# References Cited: 
+
+
+* GitHub Docs (Getting changes from a remote repository): 
+https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
+
+
+
