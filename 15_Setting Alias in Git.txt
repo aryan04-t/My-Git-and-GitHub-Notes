@@ -1,0 +1,115 @@
+# Setting Alias in Git: 
+
+
+
+@ What is an Alias: 
+
+---> An alias can be any name used in place of an original name. 
+---> An alias is just a nickname. 
+
+
+* So, in git we can set-up "Alias" for commands, and we can use these alias to run the commands instead of typing those commands. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Let's Learn How to Set-Up an Alias in Git: 
+
+
+
+Command: git config --global alias.write_here_whatever_alias_you_wanna_set_up_for_the_command write_here_the_command_for_which_you_want_to_set_up_an_alias  
+
+
+Ex-1: git config --global alias.st status
+---> Using above command, we've set up an alias named "st" for the command which is named  "status" 
+---> So, now you either run original "git status" command, or you can even use the new alias which you've set up and run "git st" command, you'll get the same output. 
+
+
+Ex-2: git config --global alias.unstage "restore --staged"
+---> Now after running this command, you can use "unstage" alias to unstage the files, instead of typing "restore --staged". 
+---> Command: git unstage name_of_file.with_its_file_extension
+---> Ex: git unstage a.txt 
+
+
+Ex-3: git config --global alias.last "log -p -1"
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Remove an Alias: 
+
+
+
+* You can run this command if you want to remove a specific alias which you created before.
+
+Command: git config --global --unset alias.NAME
+
+Ex: git config --global --unset alias.unstage 
+
+
+
+* If you want to remove all the aliases that you have made till this date, then you can run this command. 
+
+Command: git config --global --remove-section alias
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Why do we need Alias: 
+
+
+---> For short commands like "status" and "init" having an alias might seem illogical, but if you have to run a long command, repetitively over time after every few commands, then it might be irritating to type that long command again and again. 
+
+---> So, for that long command, you just set-up a small alias, so that it's easier for you to run that command again and again. 
+
+---> There are other ways also to solve this problem, you can just keep copying pasting that command or you can just use arrow key to get the command from the history of commands that you've run, but using alias is also a really efficient option. 
+
+---> You can also set up an alias for all commands, and you can create your own environment to work smoothly with the commands, but doing this is not really recommended, especially as a beginner when you're not even handy with original commands, because you might lose grip on your basics of git commands over time, as you will forget some basic commands of git also if you will not use them regularly, and if you have to use git on someone else's PC or any other PC in company, then you're so dependent on these alias of yours that you're struggling in using basic git commands in their original form. 
+
+---> So, don't do this above mistake and mostly try using original commands as much as possible as a beginner, instead of setting up an alias unnecessarily for any command. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ NOTE: 
+
+---> Always remember, setting up an alias, simply means setting up a nickname, and this means that you can either use the original name or the nickname, the output will be the same. 
+
+---> Means you can either use the alias which you have set up for the command and you can even use the original command even after setting up the alias, original commands are still functional. 
+
+---> Creating an alias with the same name as an existing alias will overwrite the previous entry.
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 14th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Setting Alias In Git | Git Tutorials #14): 
+https://www.youtube.com/watch?v=2vZrHkCVhDI&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=14 
+
+
+* Jesse Squires (Git aliases to improve productivity): 
+https://www.jessesquires.com/blog/2021/10/24/git-aliases-to-improve-productivity/
+
+
+* Stack Overflow (How to delete all git aliases at once?): 
+https://stackoverflow.com/questions/9819124/how-to-delete-all-git-aliases-at-once 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
