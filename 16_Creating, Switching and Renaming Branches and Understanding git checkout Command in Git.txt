@@ -1,0 +1,208 @@
+# Creating & Switching Branches in Git: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Understanding What is a Branch in Git: 
+
+
+* A branch is a new/separate version of the main repository.
+
+* Branches allow you to work on different parts of a project without impacting the main branch. 
+
+* When the work is complete, a branch can be merged with the main project. 
+
+* Branching in Git is very lightweight and fast! 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Local Branches: 
+
+---> All the branches which are present locally in your git repository are the local branches. 
+
+---> To Check the name of all the local branches which are present currently in your local repository, run this below written command. 
+
+Command: git branch 
+
+
+
+# Remote Branches: 
+
+---> All the branches which are present in a remote git repository are known as remote branches. 
+
+---> To check remotely available branches run this command. 
+
+Command: git branch -r 
+
+---> The -r flag here in the above command is short for --remotes  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Create a New Git Branch: 
+
+
+* By default, we always have one branch in our git repository, this main branch which is named as "master" by-default by git. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ For creating a new branch and then for automatically switching to it, you can run this below command: 
+
+Command: git checkout -b name_of_the_new_branch 
+
+---> This above command creates a new branch in your git repository, and then this command automatically switches to this new branch. 
+
+Ex: git checkout -b develop 
+---> Above written example command is creating a branch named "develop" and it is also switching our current branch to the newly created "develop" branch.
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ To simply just create a new branch, you can also run this below written command.
+
+Command: git branch branch_name
+
+---> This above command is different than "git checkout -b name_of_the_new_branch” because this command basically just creates a new branch and Git won't switch to this newly created branch automatically, you have to do it manually. 
+
+---> So, let's see the command for switching between the branches.  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Switch Between Branches: 
+
+
+* You can use below command to switch between branches: 
+
+Command: git checkout branch_name 
+ 
+Ex-1: git checkout develop 
+Ex-2: git checkout master
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Rename a Branch in Git: 
+
+
+
+@ Renaming a local branch: 
+
+
+* If you're in a different branch right now then you can rename other branch using this below written command.
+Command: git branch -m old_name new_name
+
+* But if you are currently in a branch which you want to rename, then you can use this below written command. 
+Command: git branch -m new_name 
+
+
+
+@ Note: -m is short for --move. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Renaming a remote branch: 
+
+
+* 1st delete the branch which is in the remote repository using the below command. 
+
+Command: git push name_of_remote --delete old_name_of_branch
+Ex: git push origin --delete develop 
+
+
+* Now push the renamed branch from local repository to the remote repository. 
+
+Command: git push name_of_remote new_name_of_branch 
+Ex: git push origin newCompletedFeature 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ Understanding "git checkout" command in detail: 
+
+
+* "git checkout" is a command with two core functionalities: 
+ (i) Switching between branches 
+(ii) Restoring files to a previous state 
+
+
+* So, these two above mentioned core functionalities of "git checkout" command are not clearly differentiated in their command syntax, which can lead to confusion and mistakes. 
+
+
+@ In an attempt to reduce confusion with "git checkout" command, the Git team introduced two new commands in Git version 2.23: "git switch" and "git restore". 
+
+@ These above mentioned two commands can split the previously mentioned two core functionalities of "git checkout" into two separate commands. 
+
+
+* So, that's the reason why we've seen before that we can unmodify a file using "git checkout" command also and using "git restore" command also, you can use any command out of these both to unmodify a file, both commands are valid. 
+
+* Just like that we've also studied above that we can switch between branches using "git checkout" command, but you can also switch between branches using "git switch" command, you can run the below mentioned command to switch between branches, both the commands "git checkout" and "git switch" are valid for switching between branches. 
+
+Command: git switch branch_name 
+
+
+
+@ And just like when we use "git checkout -b new_branch_name" command, then a new branch is created, and we automatically switch to it. 
+
+* Like that you can also create a branch and automatically switch to it using the "git switch" command also, run the below written command to do so: 
+
+Command: git switch -c new_branch_name 
+
+Ex: git switch -c newFeature 
+
+---> This above written switch command will also create a new branch and git will automatically switch to that newly created branch. 
+
+
+
+@ Note:
+---> In this command "git switch -c new_branch_name", -c flag is the short for "--create". 
+---> You can use any command to perform the above action either "git checkout -b new_branch_name" or "git switch -c new_branch_name", both commands are valid. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 15th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Git: Creating & Switching Branches In Git | Git Tutorials #15): 
+https://www.youtube.com/watch?v=SFDR90rAsO4&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=15
+
+
+* W3Schools (Git Branch):
+https://www.w3schools.com/git/git_branch.asp?remote=github 
+
+
+* Ionos (Git Branch: How to rename a local and remote branch): 
+https://www.ionos.com/digitalguide/websites/web-development/renaming-a-git-branch/ 
+
+
+* Towards Data Science (It’s Finally Time to Say Goodbye to “git checkout”): 
+https://towardsdatascience.com/its-finally-time-to-say-goodbye-to-git-checkout-fe95182c6100 
+
+
+* Offical Git Documentation (Git Switch Command): 
+https://git-scm.com/docs/git-switch 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
