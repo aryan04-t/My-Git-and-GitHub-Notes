@@ -1,0 +1,65 @@
+# Branching & Merging in Git: 
+
+
+
+@ You can make as many branches as you want in a git repository. it's not expensive at all to create branches in git, but in older VCS it was expensive to create branches, because there way of creating branches and storing data as a VCS was different and inefficient than git, but we will discuss about this in detail later. 
+
+
+
+@ Let's Create a Branch and Do Merging of it with the Master Branch: 
+
+
+Command: git checkout -b tryCleanUp 
+
+---> A branch named "tryCleanUp" is created, and when you use the above command, then the new branch gets created and you get switched to that new branch automatically. So, now you're in this new branch named "tryCleanUp" and you do some changes in this branch. You like the changes, they're really good. So, now you want to merge this branch with the master branch. 
+
+---> First switch to the master branch, and for switching to master branch run this command: 
+
+Command: git checkout master 
+
+---> and to switch to whatever branch you want, you can just use the above command, and in the above command instead of "master" type the name of the branch where you want to switch. 
+
+---> Now when you've reached the master branch, and you want to merge the other branch named "tryCleanUp" with this master branch. So, now run this command.
+
+Command: git merge tryCleanUp 
+
+---> Now if there are no "merge conflicts" then the "tryCleanUp" branch will be merged with the master branch without any problem.
+---> "What are merge conflicts?", we will study ahead. 
+
+---> Now, stage the modified changes and commit the merged branch, because after the commit only the merging will be considered completed. 
+
+Command: git add .
+Command: git commit -m "Added tryCleanUp Branch to Master Branch" 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+@ Highly Recommended Tip: 
+
+
+---> A good coding practice is to always leave a branch in clean manner. 
+
+---> Track or ignore untracked files, stage and commit modifications, or discard them. Clean up the working directory, and after cleaning up the working space in the branch you were working in, then only switch branch, it’s a good coding practice, every efficient and well-mannered coder should follow it, its Highly Recommended. 
+
+$ Always write valid and genuine notes in commits to maintain the integrity for git repository, whatever commit messages we've have written until now were kept short and sweet because currently our main motive is to understand and learn Git and GitHub. 
+
+$ So, whenever you do commit, write genuine commit messages which explain that what changes you've done to the code and why you've done them and how you've improved the code, don't write just "changed index.html file", don't write time when you did the commit "7 P.M.", don't write that your name is this or that, all these things are the things which git already keeps track of you don't have to mention them again again in commit messages. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+# References Cited: 
+
+
+* 16th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Branching & Merging a Production Grade Project | Git Tutorials #16): 
+https://www.youtube.com/watch?v=5e-DLY_spg0&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=16  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
