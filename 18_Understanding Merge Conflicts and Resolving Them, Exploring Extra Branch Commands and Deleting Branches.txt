@@ -1,0 +1,162 @@
+# Understanding Merge Conflicts: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+@ What are Merge Conflicts:
+
+
+* Merge conflicts occur when competing changes are made to the same line of a file, or when one person edits a file, and another person deletes the same file. 
+
+---> Git can often resolve differences between branches and merge them automatically. Usually, the changes are on different lines, or even in different files, which makes the merge simple for computers to understand. 
+
+---> However, sometimes there are competing changes that Git can't resolve without your help. 
+
+---> Often, merge conflicts happen when people make different changes to the same line of the same file, or when one person edits a file, and another person deletes the same file. 
+
+
+
+# So, when you merge 2 branches and merge conflicts occur, then you can solve these merge conflicts either by manually removing the conflict by opening the file or you can just solve the merge conflict graphically in VS Code IDE, VS Code provides a special support to solve conflicts by just clicking on options which you want to go with.
+
+@ Note: If you open your file in VS Code to solve the merge conflicts, and above the merge conflicts in your file, if you do not have the top bar for solving merge conflicts by clicking on options then do this setting in “User Preferences” to enable those options. 
+* User Preferences Settings: “editor.codeLens": true 
+
+# There is also one more option which you can go with when it comes to merge conflicts, although this option is not recommended until and unless it makes sense, but yeah, it is also an option, and that option is "Keeping or ignoring all of your conflicting changes".  
+
+
+# Once the merge conflicts are solved, now you can normally stage the changes and then commit them. 
+
+# Because as we know, only after the commit the merging will be considered completed. 
+
+
+@ Note: 
+Until a merge conflict is not solved in a local repository, it cannot be push to the remote repository or it cannot pull from the remote repository. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# How to Abort a Conflicting Merge in Git:
+
+
+---> After performing a merge if you're not able to solve a merge conflict or if you want to return to your project's previous state of before merge.
+
+---> Then you can simply throw a merge away and start over, you can run this below written command to throw away a merge. 
+
+Command: git merge --abort 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+# Branch Management: 
+
+
+@ If you want to see last commit of each branch which currently exist, then you have to run this command. 
+Command: git branch -v 
+---> This above command will give you last commit of each branch in the following output format:  Name_of_Branch  Commit_Hash  Commit_Message 
+
+
+@ If you want to see list of existing branches which you have already merged somewhere, then you have to run this command. 
+Command: git branch --merged 
+
+
+@ If you want to see list of existing branches which you have not merged anywhere, then you have to run this command. 
+Command: git branch --no-merged 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+# Command for Deleting a Branch: 
+
+
+@ Note: 
+
+* If you have merged a branch already to another branch, then this branch's data has been already added to the branch in which you merged it, but this branch which you merged still exists, and you can delete it without any hesitation if you want, because its data has already been merged to another branch, So, there is no scope of losing any important code/data which is present in this branch. 
+
+* But if you have not merged a branch anywhere, then you should think twice before deleting that branch, because it might be having some important code which is yet to be merged to your master branch.  
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+# Understanding How to Delete Local Git Branches: 
+
+
+@ Command for deleting a local branch which has been merged: 
+
+Command: git branch -d name_of_the_branch
+
+Ex: git branch -d develop 
+
+---> In above example, we're deleting a branch named "develop", but above command can only delete the branch "develop" if it was already merged somewhere, if a branch which you want to delete is not already merged somewhere, then git will give you an error, because git bash thinks that you're deleting this branch by mistake and it doesn't wants you to lose important code by mistake. 
+
+Note: -d is short for --delete 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Command for deleting a local branch which has not been merged anywhere: 
+
+
+* The branch which is not merged anywhere, if you're not deleting that branch by mistake, then you can just ignore the above error and you can run this command.  
+
+Command: git branch -D name_of_the_branch
+
+---> This above command is basically for "deleting local git branches which has not been merged". 
+
+Ex: git branch -D develop 
+
+---> This above example command will delete the "develop" branch, which was not merged anywhere.   
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Understanding How to Delete a Remote Git Branch: 
+
+
+* To delete a branch which is in the remote repository, use the below command. 
+
+Command: git push name_of_remote --delete old_name_of_branch
+Ex: git push origin --delete develop 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+@ Why Making Branches in Git is Not Expensive and How Git Stores Data to Keep Track of a Project's History: 
+
+
+---> Making branch is not an expensive task in git at all.
+---> it was an expensive task in older types of VCS because they used to copy whole folders when branches were made, but git only takes a snapshot of new changes that are made, and it simply points a pointer to old commit for data which was already there and has not been changed w.r.t the older commits.
+---> Git basically don't store data repetitively and it uses pointers and storage very wisely and efficiently, and that’s why making a branch in git is so cheap.  
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+# References Cited: 
+
+
+* 17th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Resolving Merge Conflicts (With Example) | Git Tutorials #17): 
+https://www.youtube.com/watch?v=nfOxUaA2trY&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=17 
+
+
+* GitHub Docs (About merge conflicts):
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts 
+
+
+* Stack Overflow (Visual Studio Code how to resolve merge conflicts with git?):
+https://stackoverflow.com/questions/38216541/visual-studio-code-how-to-resolve-merge-conflicts-with-git 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
