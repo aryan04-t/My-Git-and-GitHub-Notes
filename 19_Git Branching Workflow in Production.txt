@@ -1,0 +1,68 @@
+# Git Branching Workflow in Production: 
+
+
+
+* Mostly Production Software Have Two Types of Branches: 
+    (i) Long Running Branches 
+   (ii) Short-Lived Branches / Topic Branches 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Long Running Branches: 
+
+
+* Long-running branches typically remain in a project during its complete lifetime. 
+
+* These branches are not tied to specific features or topics. Instead, they represent states or stages in a project. 
+
+
+@ Some examples of long running branches: 
+
+---> The typical "main" branch for the project's mainline or production code
+---> Often also a "develop" branch where different short-lived branches are integrated
+---> Sometimes also branches like "staging" or "production" that represent certain stages or environments
+
+
+@ Along with this distinction between short-lived and long-running branches, "there's also often a golden rule: never directly commit on a long-running branch"; code should only land on these branches through deliberate integration (via merge or rebase). 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Short Lived Branches: 
+
+
+* As the name implies, these branches aren't meant to live forever. 
+
+* Instead, they were created for certain well-defined purposes, e.g.: implementing a new feature idea, fixing bugs, experimenting, etc., and these branches can then be deleted once they have been integrated into a long-running branch. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 18th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Git Branching Workflow in Production  Git Tutorials #18): 
+https://www.youtube.com/watch?v=7xhkEQS3dXw&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=18 
+
+
+* Official Git Documentations (Git Branching - Branching Workflows): 
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows 
+
+
+* Stack Overflow (A look under the hood: how branches work in Git): 
+https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/ 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
