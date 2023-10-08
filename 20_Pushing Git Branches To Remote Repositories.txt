@@ -1,0 +1,94 @@
+# Pushing Git Branches to Remote Repositories: 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+	
+
+@ Tip: Whichever branch you want to push to your remote repository, stay in that branch while pushing it, as a beginner it's better to do things like this. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# Let's Understand How to Push Local Branches to the Remote Repositories: 
+
+
+
+* Create a remote git repository on GitHub, now add the remote of the remote repository to the local repository. 
+
+
+* Now push the "master" branch to the remote repository using the below written command. 
+
+Command: git push -u remote_name branch_name 
+
+Ex: git push -u origin master 
+
+---> This above command will push "master" branch to our remote repository, and it will also set the remote "master" branch as an "upstream branch" for our local "master" branch. 
+
+
+@ Note: In above command -u flag is short for "--set-upstream". 
+
+---> We will study about upstream branches ahead. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+* Make a new branch of any name, I am making a new branch of name "bugFix", change few things in this new branch and commit the changes.
+
+* Now to push this new branch named "bugFix" to your remote git repository on GitHub, 1st check whether the working tree of this branch is clean or not, and if it is clean then use this below written command to push this branch to the remote repository. 
+
+Command: git push name_of_remote name_of_branch 
+
+Ex: git push origin bugFix 
+
+---> This above command will push your local "bugFix" branch to the remote repository, and in the remote repository also your branch will have the same name as "bugFix". 
+
+---> But if you want then you can also push this local "bugFix" branch to the remote git repository with a new name, if you want to do so then run this below written command. 
+
+Command: git push origin bugFix:myBugFix 
+
+---> This above command will push your local "bugFix" branch to the remote git repository with a new name "myBugFix", locally the name of the branch will stay as "bugFix" only, but in the remote repository name of this branch will be "myBugFix". 
+
+
+@ But honestly, pushing your local branch unnecessarily with a different name to your remote repository is not recommended.
+
+@ You should always name your branches logically even in your local git repositories, and you should push those branches to the remote repository as it is with their original name, because using above command might confuse you as a beginner, and using this above command unnecessarily is not a good coding practice.
+
+@ But in case while pushing your local branch to the remote repository, if you ever want the branch's name to be different there on the remote repository, then you can push that local branch using above command in this scenario. 
+
+@ And if you also want to rename the branch locally, then you can simply rename the local branch using "git branch -m old_name new_name" command, and then you can simply push this newly renamed local branch to the remote git repository using the basic branch push command "git push name_of_remote name_of_branch". 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Remove a Remote Branch in Git:
+
+
+* If you no longer need a remote branch, then you can remove it using this below written command. 
+
+Command: git push --delete remote_name remote_branch_name 
+Ex: git push --delete origin myBugFix 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* 19th Video of CodeWithHarry (Complete Git Tutorials For Beginners In Hindi) Playlist : (Pushing Git Branches To Remote Repositories | Git Tutorials #19): 
+https://www.youtube.com/watch?v=3Jl3oQfZHA4&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi&index=19 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
