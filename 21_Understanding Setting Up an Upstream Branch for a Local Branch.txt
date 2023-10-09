@@ -1,0 +1,194 @@
+# Understanding Upstream and Downstream Terminology w.r.t Git and GitHub / Hosting Services / Servers: 
+
+
+* Basically:
+---> In term of "flow of data", your repo is at the bottom ("downstream") of a flow coming from upstream repos ("pull from") and going back to (the same or other) upstream repos ("push to").
+
+
+* In even simpler term: 
+---> In Git, any remote repository that we clone from, or pull from, or push to, is called the "Upstream", and our local repository is known as the "Downstream".
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# What is an Upstream Branch in Git: 
+
+
+* Upstream branch is a default remote branch for your current local branch. 
+
+* It simply means that if you're setting up a remote branch as an upstream branch for a local branch, then that remote branch is the default remote branch for this local branch, in other words it means that this local branch is tracking that remote branch.
+
+* And now if in this current local branch for which you have set up an upstream branch (default remote branch), if you basically give plain "git fetch"/"git pull"/"git push" commands, without any arguments, without any remote_name and branch_name, then also git knows that where it has to pull files from and where it has to push to, because you have created a default link between a remote branch and a local branch. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+* Did you notice that we push our other branches using "git push remote_name branch_name" command and we push our 1st branch the master branch using "git push -u origin master" command. 
+
+* We can even push the master branch using "git push remote_name branch_name" command, there is no problem, and you can even push other branches also using "git push -u remote_name branch_name", there is no problem, but what does this command "git push -u remote_name branch_name" really means, let's understand. 
+
+
+* So, when we run "git push -u origin master" command, this command pushes the local "master" branch to the remote repository and now there is also a remote branch in the remote git repository which is named "master", but this above command will now set the remote "master" branch as an upstream branch (default remote branch) for the local "master" branch. 
+
+---> It means that while being in the local "master" branch, from now onwards whenever you will just give plain "git fetch"/"git pull"/"git push" command without any remote name and branch name, then also git knows that for this local "master" branch, I have an upstream branch (default remote branch) and I have to fetch/pull from there or push to it when these above commands are executed without any arguments. 
+
+
+
+@ That's it, "Basic Concept of an Upstream Branch" is only this much. 
+
+@ Now let's understand some basic git commands that "How we can set up an upstream branch for a local branch", and "How we can change the upstream branch for a local branch which already has an upstream branch set up", and "How we can check that which local branch is tracking which remote branch", etc. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How we can set up an upstream branch for a local branch: 
+
+
+
+* To set up an upstream branch for a local branch you can use -u flag with the push command or you can write "--set-upstream" instead of -u flag in the push command. 
+
+Command: git push -u remote_name branch_name 
+
+[or] 
+
+Command: git push --set-upstream remote_name branch_name 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Note: 
+---> Both above commands are same, in 1st command we're just using the -u flag which is the short of "--set-upstream", and in 2nd command we're using "--set-upstream" directly instead of using its short flag -u in the command. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+Ex: git push -u origin master 
+
+---> This above command will push the local "master" branch to the remote git repository, and then the remote git repository has the remote "master" branch, now due to the -u flag this above command will set up the remote "master" branch as an upstream branch (default remote branch) for the local "master" branch.
+
+---> And from now onwards you can start using plain "git fetch"/"git pull"/"git push" commands in the local master branch because you have set up an upstream branch (default remote branch) for the local "master" branch, that's why git will have no issues in processing the plain "git fetch"/"git pull"/"git push" commands, because it knows that it has to fetch/pull/push from the remote "master" branch when there are no arguments given in the above mentioned commands while running. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+@ Note: 
+
+---> Just like above we have set up the remote "master" branch as an upstream branch (default remote branch) for the local "master" branch, like that you can also track other remote branches also in the remote git repository using other local branches, and you can set up an upstream branch for each an every local branch if you want. 
+
+---> Always remember that you can only set-up one upstream branch for every local branch individually for pulling or pushing, you cannot set-up more than one upstream branch for any local branch for pulling or pushing, it's not possible. 
+
+---> You can have different upstream branch for a local branch for pulling and different upstream branch for a local branch for pushing, but what above two statements want to mean is that you cannot set up two remote branches as an upstream branch for a local branch for only pulling or only pushing.  
+
+---> If you have already set an upstream branch for a local branch, still if you want then you can change the upstream branch for that local branch, this is possible. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Change an Upstream Branch for a Local Branch: 
+
+
+@ By-default if you push a local branch to the remote repository using this command "git push -u remote_name branch_name", then the local branch "master" will have remote branch "master" as its upstream branch, but you can change this, it’s not necessary that local branch "master" can only have remote branch "master" as its upstream branch, it can have any remote branch of that remote git repository as its upstream branch.
+
+@ And in any situation if you don't want to keep the same name remote branch as the upstream branch of the same name local branch, then after pushing a branch using this command "git push -u remote_name branch_name" you can use this below written command to change the upstream branch of the local branch: 
+
+Command: git branch local_branch_name -u remote_name/remote_branch_name 
+
+Ex: git branch master -u origin/bugFix 
+
+---> Due to this above example command, our local branch named "master" will stop tracking the remote "master" branch and it will start tracking the remote "bugFix" branch, and now the remote "bugFix" branch is the new upstream branch (default remote branch) for the local "master" branch. 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+* But now when your local "master" branch is not tracking the remote "master" branch and it's tracking a remote branch of different name. So, you cannot use this feature of upstream  branch, you cannot just type plain "git push" command to push local master branch to the remote "bugFix" branch, you have to explicilty push this branch. 
+
+Command: git push remote_name HEAD:remote_branch_name
+
+Ex: git push origin HEAD:bugFix 
+
+---> So, when you make a local branch track a remote branch of another name, you're not able to push to that remote branch using the plain "git push" command without any arguments, and when you have to do it explicitly, then you can do it even when your current local branch is not tracking that different remote branch. 
+
+---> That's why creating this above scenario is not recommended because it is not useful. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to check that which remote branch is an upstream branch of which local branch: 
+
+[or] We can say 
+
+# How to check which local branch is tracking which remote branch: 
+
+
+
+* Run the below written command to check that "Which local branch is tracking which remote branch".
+
+Command: git branch -vv 
+
+---> This above command will list all your local branches that are tracking upstream branches, and this command will also show that which remote branch is being tracked by which local branch. 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# How to Unset the Upstream Branch for any Local Branch Which we've Set-up using "git push -u remote_name branch_name" command: 
+
+
+Command: git branch --unset-upstream local_branch_name 
+
+Ex: git branch --unset-upstream master 
+
+---> After above command you can run "git branch -vv" command and check that now local "master" branch will not be tracking any remote branch. 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+# References Cited: 
+
+
+* Leela Web Dev (38. What git push -u mean? Set upstream for the local branch using -u option in push command - GIT): 
+https://www.youtube.com/watch?v=csHeaYWspic
+
+
+* Study Tonight (Git Upstream and Downstream): 
+https://www.studytonight.com/git-guide/git-upstream-and-downstream
+
+
+* Stack Overflow (Definition of "downstream" and "upstream"): 
+https://stackoverflow.com/questions/2739376/definition-of-downstream-and-upstream 
+
+
+* GeeksForGeeks (How to Set Upstream Branch on Git?):
+https://www.geeksforgeeks.org/how-to-set-upstream-branch-on-git/
+
+
+* PheonixNAP (What Is Git Upstream And How To Set Upstream Branch): 
+https://phoenixnap.com/kb/git-set-upstream 
+
+
+* Stack Overflow (Can i define multiple upstream branches for a local branch?): 
+https://stackoverflow.com/questions/12517097/can-i-define-multiple-upstream-branches-for-a-local-branch 
+
+
+* Official Git Documents (How to Unset an Upstream Branch): 
+https://git-scm.com/docs/git-branch/2.19.0
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+
