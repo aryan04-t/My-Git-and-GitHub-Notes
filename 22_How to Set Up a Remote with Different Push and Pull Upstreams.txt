@@ -1,0 +1,37 @@
+# How to Set Up a Remote with Different pull/push Upstream: 
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+* By-default when you add a remote with a url to your local git repository, then for pushing and pulling both the URLs are same for that remote. 
+ 
+* And you can check this by running this below written command. 
+
+Command: git remote -v 
+
+
+* But if you want then you can customize this remote and you can make it pull/fetch from a different repository and push to a different repository if you want. 
+
+* The commands for configuring the remote in this customized manner are: 
+
+Command-1: git remote set-url name_of_remote_that_you_want_to_customize --fetch new_pull_url 
+
+Ex: git remote set-url origin --fetch new_pull_url 
+
+
+Command-2: git remote set-url name_of_remote_that_you_want_to_customize --push new_push_url 
+
+Ex: git remote set-url origin --push new_push_url 
+
+
+---> To verify whether the remote links are customized or not, you can again run "git remote -v" command to check the fetch and push link of all the remotes. 
+
+
+@ This aboves configuration is helpful when you need to pull from one location (e.g., a public repository) and push to another (e.g., a private repository or a different branch). 
+
+
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
