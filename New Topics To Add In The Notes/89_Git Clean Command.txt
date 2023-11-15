@@ -1,0 +1,13 @@
+@ git clean is a convenience method for deleting untracked files in a repo's working directory.
+
+* Untracked files are those that are in the repo's directory but have not yet been added to the repo's index with git add command. 
+
+
+
+
+# References Cited: 
+
+https://www.atlassian.com/git/tutorials/undoing-changes/git-clean#:~:text=quit%206%3A%20help-,Summary,repo's%20index%20with%20git%20add%20.
+
+
+

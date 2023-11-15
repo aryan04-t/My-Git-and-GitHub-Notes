@@ -1,0 +1,9 @@
+How to rollback the last commit in Git:
+git revert will create a new commit that is the opposite of everything in the given commit.
+We can revert the latest commit by using the head alias like this:
+
+git revert HEAD
+How to rollback an old commit in Git:
+You can revert an old commit using its commit id. This opens the editor so you can add a commit message.
+
+git revert comit_id_here

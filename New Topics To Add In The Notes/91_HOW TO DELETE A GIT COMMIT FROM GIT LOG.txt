@@ -1,0 +1,5 @@
+https://linuxhint.com/remove-commit-from-history-git/ 
+
+Last commit reset: git reset --hard HEAD~1 
+
+Also Study git revert

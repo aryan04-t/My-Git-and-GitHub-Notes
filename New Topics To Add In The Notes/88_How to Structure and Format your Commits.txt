@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/37282830/why-does-git-commit-vim-color-the-messages-this-way
